@@ -6,11 +6,15 @@ class Car {
   will be used to initialize class properties.
   */
   constructor(cColor, x, y) {
+    this.x = x;
+    this.y = y;
+    this.width = 20;
+    this.height = 10;
+
+
     this.color = cColor;
     this.doors = 4;
     this.isConvertible = false;
-    this.x = x;
-    this.y = y;
     this.speed = 0;
   }
 
@@ -20,7 +24,7 @@ class Car {
 
   display() { // method!
     fill(this.color);
-    rect(this.x, this.y, 20, 10);
+    rect(this.x, this.y, this.width, this.height);
   }
 
   move() { // method!
