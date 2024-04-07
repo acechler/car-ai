@@ -40,8 +40,6 @@ class Car {
 
 
 let rav4;
-let charger;
-let nova;
 
 
 
@@ -50,31 +48,22 @@ function setup() {
   /* Construct the 3 Cars */
   //constructor expects cColor, x, y
   rav4 = new Car("silver", 100, 300);
-  charger = new Car("gold", 0, 200);  
-  nova = new Car("blue", 200, 100); 
-  nova.doors = 2; //update nova's doors property
+
   
   console.log("rav4", rav4);
-  console.log("charger", charger);
-  console.log("nova", nova);
+
   
   //call start methods of Car instances
   //the start method expects a number for speed
   rav4.start(2.3);
-  charger.start(-4);
-  nova.start(random(-1, 1));
+
 }
 
 function draw() {
   background("beige");
   
-  //display and move all 3 Cars
   rav4.display();
-  charger.display();
-  nova.display();
-  
   rav4.move();
-  charger.move();
-  nova.move();
+
 }
 
