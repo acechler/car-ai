@@ -36,17 +36,25 @@ class Car {
       this.x = -20;
     }
 
-    if(keyCode === 68){
+    if (this.y < -20){
+      this.y = this.height;
+    } else if(this.y > height){
+      this.y = 20;
+    }
+
+    switch(keyCode) {
+      case 68:
       this.x += this.speed;
-    }
-    if(keyCode === 65){
+      break;
+      case 65:
       this.x -= this.speed;
-    }
-    if(keyCode === 87){
+      break;
+      case 87:
       this.y -= this.speed;
-    }
-    if(keyCode === 83){
+      break;
+      case 83:
       this.y += this.speed;
+      break;
     }
 
     
@@ -79,6 +87,7 @@ function draw() {
   
   rav4.display();
   rav4.move();
+  
 
 }
 
