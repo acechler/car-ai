@@ -2,10 +2,7 @@
 
 
 class Car {
-  /* Constructor expects parameters for
-  fill color, x and y coordinates that
-  will be used to initialize class properties.
-  */
+
   constructor(cColor, x, y) {
     this.x = x;
     this.y = y;
@@ -19,12 +16,10 @@ class Car {
   }
 
   start(speed) {
-    // method expects parameter!
     this.speed = speed;
   }
 
   display() {
-    // method!
     fill(this.color);
     rect(this.x, this.y, this.width, this.height);
   }
@@ -37,7 +32,6 @@ class Car {
       this.x = -20;
     }
 
-    // Corrected to use 'height' for canvas height
     if (this.y < -20) {
       this.y = height;
     } else if (this.y > height) {
@@ -65,13 +59,11 @@ let rav4;
 
 function setup() {
   createCanvas(800, 800);
-  //constructor expects cColor, x, y
   rav4 = new Car("silver", 100, 300);
 
   console.log("rav4", rav4);
 
-  //call start methods of Car instances
-  //the start method expects a number for speed
+
   rav4.start(2.3);
 }
 
