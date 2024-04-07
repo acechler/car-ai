@@ -1,4 +1,4 @@
-class Car {
+ class Car {
   constructor(x, y, width, height) {
     this.x = x;
     this.y = y;
@@ -69,42 +69,5 @@ class Car {
     rect(0, 0, this.width, this.height); // Draw the car
     pop(); // Restore the drawing state
   }
-}
+} 
 
-/*   class Car {
-    constructor(x, y, mass) {
-      this.position = createVector(x, y);
-      this.velocity = createVector(0, 0);
-      this.acceleration = createVector(0, 0);
-      this.mass = mass;
-      this.angle = 0;
-      this.steeringForce = createVector(0, 0);
-    }
-  
-    applyForce(force) {
-      let f = p5.Vector.div(force, this.mass);
-      this.acceleration.add(f);
-    }
-  
-    update() {
-      this.velocity.add(this.acceleration);
-      this.position.add(this.velocity);
-      this.acceleration.mult(0); // Reset acceleration each frame
-    }
-  
-    turn(angle) {
-      this.angle += angle;
-      this.steeringForce = p5.Vector.fromAngle(this.angle).mult(0.05);
-      this.applyForce(this.steeringForce);
-    }
-  
-    draw() {
-      push();
-      translate(this.position.x, this.position.y);
-      rotate(this.velocity.heading());
-      rectMode(CENTER);
-      rect(0, 0, 50, 30);
-      pop();
-    }
-  }
- */
