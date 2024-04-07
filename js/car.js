@@ -65,7 +65,6 @@
     push(); // Save the current drawing state
     translate(this.x, this.y); // Move to the car's position
     rotate(-this.angle); // Rotate to the car's angle
-    rectMode(CENTER);
     rect(0, 0, this.width, this.height); // Draw the car
     pop(); // Restore the drawing state
   }

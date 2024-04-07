@@ -2,10 +2,14 @@ let car;
 
 function setup() {
   createCanvas(800, 800);
+  rectMode(CENTER);
+  angleMode(DEGREES);
   car = new Car(100, 100, 50, 30); // Initialize car
 }
 
 function draw() {
+
+
   background(100); // Clear the canvas
   fill(255, 0, 0);
   car.update();
