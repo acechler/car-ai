@@ -27,38 +27,37 @@ class Car {
     rect(this.x, this.y, this.width, this.height);
   }
 
-  move() { // method!
-
+  move() {
     // Wrap x around boundaries
     if (this.x < -20) {
       this.x = width;
     } else if (this.x > width) {
       this.x = -20;
     }
-
+  
+    // Corrected to use 'height' for canvas height
     if (this.y < -20){
-      this.y = this.height;
+      this.y = height;
     } else if(this.y > height){
-      this.y = 20;
+      this.y = -20;
     }
-
+  
     switch(keyCode) {
-      case 68:
-      this.x += this.speed;
-      break;
-      case 65:
-      this.x -= this.speed;
-      break;
-      case 87:
-      this.y -= this.speed;
-      break;
-      case 83:
-      this.y += this.speed;
-      break;
+      case 68: // D key
+        this.x += this.speed;
+        break;
+      case 65: // A key
+        this.x -= this.speed;
+        break;
+      case 87: // W key
+        this.y -= this.speed;
+        break;
+      case 83: // S key
+        this.y += this.speed;
+        break;
     }
-
-    
   }
+  
 } //end class Car
 
 
@@ -87,7 +86,7 @@ function draw() {
   
   rav4.display();
   rav4.move();
-  
+  //console.table(rav4);
 
 }
 
