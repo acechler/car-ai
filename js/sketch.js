@@ -28,7 +28,7 @@ class Car {
   }
 
   move() { // method!
-    this.x += this.speed;
+
     // Wrap x around boundaries
     if (this.x < -20) {
       this.x = width;
@@ -36,18 +36,19 @@ class Car {
       this.x = -20;
     }
 
-    if(keyCode === RIGHT_ARROW){
+    if(keyCode === 68){
       this.x += this.speed;
     }
-    if(keyCode === LEFT_ARROW){
-      this.x += this.speed;
+    if(keyCode === 65){
+      this.x -= this.speed;
     }
-    if(keyCode === UP_ARROW){
+    if(keyCode === 87){
       this.y -= this.speed;
     }
-    if(keyCode === DOWN_ARROW){
+    if(keyCode === 83){
       this.y += this.speed;
     }
+
     
   }
 } //end class Car
@@ -80,3 +81,5 @@ function draw() {
   rav4.move();
 
 }
+
+
