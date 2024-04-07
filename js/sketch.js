@@ -35,6 +35,20 @@ class Car {
     } else if (this.x > width) {
       this.x = -20;
     }
+
+    if(keyCode === RIGHT_ARROW){
+      this.x += this.speed;
+    }
+    if(keyCode === LEFT_ARROW){
+      this.x += this.speed;
+    }
+    if(keyCode === UP_ARROW){
+      this.y -= this.speed;
+    }
+    if(keyCode === DOWN_ARROW){
+      this.y += this.speed;
+    }
+    
   }
 } //end class Car
 
@@ -65,10 +79,4 @@ function draw() {
   rav4.display();
   rav4.move();
 
-}
-
-function keyPressed(){
-  if(keyCode === RIGHT_ARROW){
-    console.log('right arrow');
-  }
 }
