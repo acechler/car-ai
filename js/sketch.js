@@ -44,7 +44,7 @@ let rav4;
 
 
 function setup() {
-  createCanvas(200, 400);
+  createCanvas(800, 800);
   /* Construct the 3 Cars */
   //constructor expects cColor, x, y
   rav4 = new Car("silver", 100, 300);
@@ -67,3 +67,8 @@ function draw() {
 
 }
 
+function keyPressed(){
+  if(keyCode === RIGHT_ARROW){
+    console.log('right arrow');
+  }
+}
