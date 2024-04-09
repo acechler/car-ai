@@ -4,4 +4,16 @@ class MovementComponent extends IMovable{
         this.velocity = velocity;
         this.acceleration = acceleration;
     }
+
+    applyForce(){
+        console.log('apply force');
+    }
+
+    update(){
+        console.log('update');
+    }
+
+    move(direction){
+        console.log('move');
+    }
 }
